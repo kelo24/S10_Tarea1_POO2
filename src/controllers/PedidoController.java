@@ -9,7 +9,7 @@ import models.Pedidos;
 
 public class PedidoController {
     
-    private int basePrice = 10;
+    private int basePrice = 20;
     int qInventory = 10;
     
     

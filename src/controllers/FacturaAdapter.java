@@ -19,14 +19,15 @@ public class FacturaAdapter {
         double total = price.get(2);
         ArrayList<String> facturaData = oldModule.devolverFactura(p, subtotal, igv, total);
         
-        String facturaString = "\nNombre: " + facturaData.get(0)
-                            +   "\nProducto: " + facturaData.get(1)
-                            +   "\nCantidad: " + facturaData.get(2)
-                            +   "\nSub-total = " + facturaData.get(3)
-                            +   "\nIGV (18%) = " + facturaData.get(4)
-                            +   "\nTotal = " + facturaData.get(5);
+        String factura = "\n\n            FACTURA ELECTRONICA"   
+                            +   "\n\nNombre   : " + facturaData.get(0)
+                            +   "\nProducto : " + facturaData.get(1)
+                            +   "\nCantidad : " + facturaData.get(2)
+                            +   "\n\nSub-total = S/" + facturaData.get(3)
+                            +   "\nIGV (18%) = S/" + facturaData.get(4)
+                            +   "\nTotal     = S/" + facturaData.get(5);
         
-        return facturaString;
+        return factura;
         
     }
     
