@@ -2,12 +2,11 @@
 package controllers;
 
 import java.util.ArrayList;
-import models.Pedido;
 
-/**
- *
- * @author kelvincitopkmz
- */
+import models.Pedido;
+import models.Pedidos;
+
+
 public class PedidoController {
     
     private int basePrice = 10;
@@ -36,5 +35,14 @@ public class PedidoController {
         numeros.add(total);
         
         return numeros;
+    }
+    
+    public String register(Pedido p) {
+        
+        Pedidos pedidos = new Pedidos();
+        
+        String response = pedidos.registrarPedido(p);
+        
+        return response;
     }
 }

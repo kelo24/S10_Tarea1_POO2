@@ -2,6 +2,7 @@ package controllers;
 
 import java.util.ArrayList;
 import controllers.PedidoController;
+import models.Pedido;
 
 /**
  *
@@ -14,16 +15,27 @@ public class PedidoFacade {
         
         String response = "";
         
-        PedidoController p = new PedidoController();
+        PedidoController pCon = new PedidoController();
         
         // Validación de stock
-        if (!p.stockValidation(q)) {
+        if (!pCon.stockValidation(q)) {
             response = "No hay suficiente stock para registrar el pedido.";
             return response;
         }
+        
         // Cálculo de números
-        ArrayList<Double> price = p.calcTaxes(q);
+        ArrayList<Double> price = pCon.calcTaxes(q);
+        
         // Registro del pedido
+        Pedido p = new Pedido(name, product, q);
+        p.setSubtotal(price.get(0));
+        p.setIgv(price.get(1));
+        p.setTotal(price.get(2));
+        
+        response = pCon.register(p);
+        
+        // Comprobante
+        
         
         
         return response;    

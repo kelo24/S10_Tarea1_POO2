@@ -7,6 +7,10 @@ public class Pedido {
     private String product;
     private int q;
     
+    private double subtotal;
+    private double igv;
+    private double total;
+    
     // constructor
     public Pedido(String name, String product, int q) {
         this.name = name;
@@ -31,6 +35,25 @@ public class Pedido {
     }
     public void setQ(int q) {
         this.q = q;
+    }
+
+    public double getSubtotal() {
+        return subtotal;
+    }
+    public void setSubtotal(double subtotal) {
+        this.subtotal = subtotal;
+    }
+    public double getIgv() {
+        return igv;
+    }
+    public void setIgv(double igv) {
+        this.igv = igv;
+    }
+    public double getTotal() {
+        return total;
+    }
+    public void setTotal(double total) {
+        this.total = total;
     }
     
 }
