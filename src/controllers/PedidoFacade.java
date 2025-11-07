@@ -6,4 +6,9 @@ package controllers;
  */
 public class PedidoFacade {
     
+    public String registrarPedido() {
+        
+        
+        return "";
+    }
 }
