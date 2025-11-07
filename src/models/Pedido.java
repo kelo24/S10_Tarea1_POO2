@@ -5,6 +5,6 @@ package models;
  *
  * @author kelvincitopkmz
  */
-public class Producto {
+public class Pedido {
     
 }
