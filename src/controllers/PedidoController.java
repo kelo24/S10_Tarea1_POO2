@@ -45,4 +45,13 @@ public class PedidoController {
         
         return response;
     }
+    
+    public String generateTicket(Pedido p, ArrayList<Double> price) {
+        
+        FacturaService newModule = new FacturaService();
+        
+        String factura = newModule.registrarFactura(p, price);
+        
+        return factura;
+    }
 }

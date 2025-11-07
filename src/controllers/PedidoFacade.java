@@ -28,15 +28,12 @@ public class PedidoFacade {
         
         // Registro del pedido
         Pedido p = new Pedido(name, product, q);
-        
-        
         response += pCon.register(p);
         
         // Factura
         
-//        p.setSubtotal(price.get(0));
-//        p.setIgv(price.get(1));
-//        p.setTotal(price.get(2));
+        String factura = pCon.generateTicket(p, price);
+        response += factura;
         
         return response;    
     }

@@ -33,7 +33,5 @@ public class Pedido {
     public void setQ(int q) {
         this.q = q;
     }
-
-    
     
 }
