@@ -9,6 +9,6 @@ public class Pedidos {
     
     public String registrarPedido(Pedido p) {
         pedidos.add(p);
-        return "Pedido registrado.";
+        return "\nPedido registrado.";
     }
 }
