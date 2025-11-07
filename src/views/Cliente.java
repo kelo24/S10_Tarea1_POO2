@@ -32,7 +32,15 @@ public class Cliente {
                 case 1:
                     
                     PedidoFacade facade = new PedidoFacade();
-                    String response = facade.registrarPedido();
+                    
+                    System.out.println("Nombre:");
+                    String name = sc.nextLine();
+                    System.out.println("Producto:");
+                    String product = sc.nextLine();
+                    System.out.println("Cantidad:");
+                    int q = sc.nextInt();
+                    
+                    String response = facade.registrarPedido(name, product, q);
                     
                     System.out.println(response);
                     
